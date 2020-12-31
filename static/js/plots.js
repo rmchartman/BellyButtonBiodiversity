@@ -24,14 +24,15 @@ function buildMetadata(sample) {
       var resultArray = metadata.filter(sampleObj => sampleObj.id == sample);
       var result = resultArray[0];
       var PANEL = d3.select("#sample-metadata");
+      console.log(result.id);
 
       PANEL.html("");
-      PANEL.append("h6").text(`ID: ${result.id}`);
-      PANEL.append("h6").text(`ETHNICITY: ${result.ethinicity}`);
-      PANEL.append("h6").text(`GENDER: ${result.gender}`);
-      PANEL.append("h6").text(`AGE: ${result.age}`);
-      PANEL.append("h6").text(`LOCATION: ${result.location}`);
-      PANEL.append("h6").text(`BBTYPE: ${result.bbtype}`);
-      PANEL.append("h6").text(`WFREQ: ${result.wfreq}`);
+      PANEL.append("h6").text(`${result.id}`);
+      PANEL.append("h6").text(`${result.ethinicity}`);
+      PANEL.append("h6").text(`${result.gender}`);
+      PANEL.append("h6").text(`${result.age}`);
+      PANEL.append("h6").text(`${result.location}`);
+      PANEL.append("h6").text(`${result.bbtype}`);
+      PANEL.append("h6").text(`${result.wfreq}`);
     });
   }

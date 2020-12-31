@@ -1,0 +1,7 @@
+.jumbotron {
+    background-image: url("static/images/how-bacteria-work-360x240.jpg");
+    background-position:center;
+}
+.h6, h6 {
+    font-size: 14px ;
+}

@@ -91,7 +91,7 @@ function buildCharts(sample) {
       title: "Top 10 Bacteria Cultures Found",
       xaxis: { title: "Frequency"},
       yaxis: { title: "Bacterial Culture ID", autorange: "reversed"},
-      width: 500, height: 400, margin: { t: 50, b: 30, r:0 }
+      width: 325, height: 425, margin: { t: 50, b: 30, r:0 }
     }; 
     // 10. Use Plotly to plot the data with the layout. 
     Plotly.newPlot("bar", barData, barLayout);
@@ -116,7 +116,8 @@ function buildCharts(sample) {
       title: "Bacteria Cultures Per Sample",
       xaxis: { title: "OTU ID"},
       yaxis: { title: "Bacterial Culture ID"},
-      margin: { t: 100, b: 100,}
+      margin: { t: 100, b: 100,},
+      bordercolor: "black"
     };
 
     // 3. Use Plotly to plot the data with the layout.
@@ -147,14 +148,14 @@ function buildCharts(sample) {
           ]},
         
         value: wfreq,
-        title: { text: "Belly Button Washing Frequency: Scrubs per Week", font: { size: 15 }},
+        title: { text: "<b>Belly Button Washing Frequency:</b> <br> Scrubs per Week", font: { size: 15 }},
         type: "indicator",
         mode: "gauge+number"
     }];
     
     // 5. Create the layout for the gauge chart.
     var gaugeLayout = { 
-      width: 475, height: 400, margin: { t: 0, b: 0 } 
+      width: 450, height: 300, margin: { t: 0, b: 0, r:30, l:30 } 
     };
 
     // 6. Use Plotly to plot the gauge data and layout.
